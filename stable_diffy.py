@@ -9,10 +9,8 @@ load_dotenv()
 
 
 def run_stable_diffusion(prompt: str):
-    device = str("cuda") if torch.cuda.is_available() else str("cpu")
-    model_id = str(
-        "D:/03.Models/models/checkpoints/stable-diffusion/illuminatiDiffusionV1_v11-unclip-h-fp16.safetensors",
-    )
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model_id = "D:/03.Models/models/checkpoints/stable-diffusion/illuminatiDiffusionV1_v11-unclip-h-fp16.safetensors"
 
     auth_token = os.getenv("HUGGINGFACE_TOKEN")
 

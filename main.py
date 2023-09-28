@@ -56,8 +56,7 @@ class Styles(BaseModel):
 
 @app.get("/styles")
 def styles(styles: str):
-    styles = json.loads(styles)
-    return styles
+    return json.loads(styles)
 
 
 if __name__ == "__main__":
